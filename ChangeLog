@@ -1,0 +1,7 @@
+1.0-3	Per new R 2.14.0 standards:
+		Removed LazyLoad field from DESCRIPTION
+		Moved vignette to vignettes directory
+1.0-2	Authors@R field in the DESCRIPTION file adjusted to comply with 
+		R 2.14.0 standards
+1.0-1	Minor adjustments made to the documentation files
+1.0-0	Original release

@@ -93,8 +93,9 @@ The \Rpackage{trapezoid} package provides functions for the probability density 
 The generalized trapezoidal distribution simplifies to the trapezoidal distribution when \begin{math} m = n = 2 \text{ and } \alpha = 1\end{math}. 
 
 <<trapezoid, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
-# ggplot2 is required for these examples
+# plyr and ggplot2 are required for these examples
 require(trapezoid)
+require(plyr)
 require(ggplot2)
 
 # Trapezoid

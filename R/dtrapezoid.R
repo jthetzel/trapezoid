@@ -17,7 +17,7 @@ dtrapezoid <- function(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2,
 				parameters[,7] <- n3
 				parameters[,8] <- alpha
 			}, error = function(X) {
-				stop(paste(" -- Aruments min, mode1, mode2, max, n1, n3, and alpha
+				stop(paste(" -- Arguments min, mode1, mode2, max, n1, n3, and alpha
 										must be of equal length", sep=""))
 			})
 	
@@ -61,4 +61,3 @@ dtrapezoid <- function(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2,
 	
 	return(out)
 }
-

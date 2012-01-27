@@ -1,11 +1,16 @@
 Package: trapezoid
-Version: 1.0-3
-Date: 2011-11-04
+Version: 1.0-5
+Date: 2012-01-02
 Title: The Trapezoidal Distribution
 Authors@R: person(given = "Jeremy Thoms", family = "Hetzel",
-				 email = "jthetzel@gmail.com",
-				 role = c("aut", "cre"))				 
-Depends: R (>= 2.12.0)
-Description: The trapezoid package provides dtrapezoid, ptrapezoid, qtrapezoid, and rtrapezoid functions for the trapezoidal distribution. 
-License: GPL-3	 
-LazyData: yes				 
+    email = "jthetzel@gmail.com",
+    role = c("aut", "cre"))
+Depends:
+    R (>= 2.12.0)
+Suggests:
+    ggplot2
+    plyr
+Description: The trapezoid package provides dtrapezoid, ptrapezoid, qtrapezoid,
+    and rtrapezoid functions for the trapezoidal distribution.
+License: GPL-3
+LazyData: yes

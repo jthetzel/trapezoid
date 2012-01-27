@@ -1,3 +1,6 @@
+1.0-5	Explicitly require plyr in examples and added plyr to suggests field in 
+			DESCRIPTION to avoid a R check error when building with R-devel.
+1.0-4	Added 'Suggests:' field to DESCRIPTION
 1.0-3	Per new R 2.14.0 standards:
 		Removed LazyLoad field from DESCRIPTION
 		Moved vignette to vignettes directory

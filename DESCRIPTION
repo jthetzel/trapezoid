@@ -14,3 +14,8 @@ Description: The trapezoid package provides dtrapezoid, ptrapezoid, qtrapezoid,
     and rtrapezoid functions for the trapezoidal distribution.
 License: GPL-3
 LazyData: yes
+Collate:
+    'dtrapezoid.R'
+    'ptrapezoid.R'
+    'qtrapezoid.R'
+    'rtrapezoid.R'

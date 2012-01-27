@@ -83,7 +83,7 @@
 	
 	
 	## Explore effects of n1, n3, and alpha parameters
-# plyr and ggplot2 are required for this example
+	# plyr and ggplot2 are required for this example
 	require(plyr)
 	require(ggplot2)
 	

@@ -89,7 +89,7 @@
 	
 	x <- seq(from = 0, to = 1, by = 0.01)	
 	
-# Create a lists of arguments, varying n1, n3, and alpha
+	# Create a lists of arguments, varying n1, n3, and alpha
 	arguments <- list()
 	arguments[['A']] <- list(x = x, n1 = 2, n3 = 2, alpha = 0.8)
 	arguments[['B']] <- list(x = x, n1 = 1.5, n3 = 1.5, alpha = 1)
@@ -102,7 +102,7 @@
 	arguments[['I']] <- list(x = x, n1 = 0.5, n3 = 1.5, alpha = 1.5)
 	arguments[['J']] <- list(x = x, n1 = 0.5, n3 = 2.5, alpha = 0.5)
 	
-# Calculate the distributions
+	# Calculate the distributions
 	plot.data <- ldply(arguments, function(z)
 		{
 			x <- z$x
@@ -113,10 +113,10 @@
 			out <- data.frame(x, density, args)
 		})
 	
-# Create labels for later use in displaying the arguments on the plots 
+	# Create labels for later use in displaying the arguments on the plots 
 	plot.data$label <- paste(plot.data$.id, ": ", plot.data$args, sep="")
 	
-# Create plots
+	# Create plots
 	generalizedTrapezoids <- ggplot(data = plot.data, aes(x = x, y = density)) + 
 		geom_line() + theme_bw() + 
 		facet_wrap(~label, ncol = 2, scales = "free_y")

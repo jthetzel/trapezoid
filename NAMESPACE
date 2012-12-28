@@ -1,1 +1,2 @@
 export(dtrapezoid, ptrapezoid, qtrapezoid, rtrapezoid)
+useDynLib(trapezoid)

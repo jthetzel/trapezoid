@@ -18,16 +18,16 @@
 }
 \usage{
 	dtrapezoid(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
-		alpha = 1, log = FALSE)
+	  alpha = 1, log = FALSE)
 	ptrapezoid(q, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
-		alpha = 1, lower.tail = TRUE, log.p = FALSE)
+	  alpha = 1, lower.tail = TRUE, log.p = FALSE)
 	qtrapezoid(p, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
-		alpha = 1, lower.tail = TRUE, log.p = FALSE)
+	  alpha = 1, lower.tail = TRUE, log.p = FALSE)
 	rtrapezoid(n, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
-		alpha = 1)
+	  alpha = 1)
 }
 \arguments{
-	\item{x,q}{vector of quantiles.}
+	\item{x, q}{vector of quantiles.}
 	\item{p}{vector of probabilities.}
 	\item{n}{number of observations. If length(n) \eqn{>} 1, the length
 		is taken to be the number required.}
@@ -73,13 +73,13 @@
 \author{Jeremy Thoms Hetzel \email{jthetzel@gmail.com}}
 \examples{
 	## Plot default trapezoid distribution
-	curve(dtrapezoid(x, min=0, mode1=1/3, mode2=2/3, max=1, n1=2, n3=2, alpha=1),
-		from=0, to=1)
+	curve(dtrapezoid(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, 
+	  n1 = 2, n3 = 2, alpha = 1), from = 0, to = 1)
 	
 	
 	## Plot triangular trapezoid distribution
-	curve(dtrapezoid(x, min=0, mode1=1/2, mode2=1/2, max=1, n1=2, n3=2, alpha=1),
-		from=0, to=1)
+	curve(dtrapezoid(x, min = 0, mode1 = 1/2, mode2 = 1/2, max = 1, 
+	  n1 = 2, n3 = 2, alpha = 1), from = 0, to = 1)
 	
 	
 	## Explore effects of n1, n3, and alpha parameters
@@ -89,7 +89,7 @@
 	
 	x <- seq(from = 0, to = 1, by = 0.01)	
 	
-	# Create a lists of arguments, varying n1, n3, and alpha
+	# Create a list of arguments, varying n1, n3, and alpha
 	arguments <- list()
 	arguments[['A']] <- list(x = x, n1 = 2, n3 = 2, alpha = 0.8)
 	arguments[['B']] <- list(x = x, n1 = 1.5, n3 = 1.5, alpha = 1)
@@ -104,22 +104,22 @@
 	
 	# Calculate the distributions
 	plot.data <- ldply(arguments, function(z)
-		{
-			x <- z$x
-			density <- dtrapezoid(x = z$x, min = 0, mode1 = 0.2, mode2 = 0.8,
-				max = 1, n1 = z$n1, n3 = z$n3, alpha = z$alpha)
-			args <- paste("n1 = ", z$n1, ", n3 = ", z$n3, ", alpha = ", z$alpha, 
-				sep="", collapse="")
-			out <- data.frame(x, density, args)
-		})
+	{
+	  x <- z$x
+	  density <- dtrapezoid(x = z$x, min = 0, mode1 = 0.2, mode2 = 0.8,
+	    max = 1, n1 = z$n1, n3 = z$n3, alpha = z$alpha)
+	  args <- paste("n1 = ", z$n1, ", n3 = ", z$n3, ", alpha = ", z$alpha, 
+	    sep="", collapse="")
+	  out <- data.frame(x, density, args)
+	})
 	
 	# Create labels for later use in displaying the arguments on the plots 
 	plot.data$label <- paste(plot.data$.id, ": ", plot.data$args, sep="")
 	
 	# Create plots
 	generalizedTrapezoids <- ggplot(data = plot.data, aes(x = x, y = density)) + 
-		geom_line() + theme_bw() + 
-		facet_wrap(~label, ncol = 2, scales = "free_y")
+	  geom_line() + theme_bw() + 
+	  facet_wrap(~label, ncol = 2, scales = "free_y")
 	print(generalizedTrapezoids)
 }
 \keyword{distribution}

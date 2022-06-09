@@ -1,5 +1,5 @@
 Package: trapezoid
-Version: 2.0-1
+Version: 2.0-2
 Date: 2022-06-09
 Title: The Trapezoidal Distribution
 Authors@R: person(given = "Jeremy Thoms", family = "Hetzel",
@@ -10,8 +10,8 @@ Depends:
 Suggests:
     ggplot2,
     plyr
-Description: The trapezoid package provides dtrapezoid, ptrapezoid, qtrapezoid,
-    and rtrapezoid functions for the trapezoidal distribution.
+Description: The trapezoid package provides 'dtrapezoid', 'ptrapezoid', 'qtrapezoid',
+    and 'rtrapezoid' functions for the trapezoidal distribution.
 License: GPL-3
 Collate:
     'dtrapezoid.R'

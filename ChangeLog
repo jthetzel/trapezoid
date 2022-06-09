@@ -1,3 +1,4 @@
+2.0-2   Wrap function names in DESCRIPTION in quotes to avoid spell note
 2.0-1   Remove R CMD check warnings regarding "runif" and
 	registered native routines	
 2.0-0   Re-implemented with C code to improve speed

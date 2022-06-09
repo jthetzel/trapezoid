@@ -1,2 +1,3 @@
+importFrom("stats", "runif")
 export(dtrapezoid, ptrapezoid, qtrapezoid, rtrapezoid)
-useDynLib(trapezoid)
+useDynLib(trapezoid, .registration=TRUE)

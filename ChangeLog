@@ -1,3 +1,5 @@
+2.0-1   Remove R CMD check warnings regarding "runif" and
+	registered native routines	
 2.0-0   Re-implemented with C code to improve speed
 1.0-5	Explicitly require plyr to conform more properly to namespaces
 1.0-4	Added 'Suggests:' field to DESCRIPTION
